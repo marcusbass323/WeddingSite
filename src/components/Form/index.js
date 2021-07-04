@@ -34,7 +34,7 @@ export default function Index({ rsvpClose }) {
         .then(function (response) {
           if(response.data.status === 'success'){
             document.getElementById('modalTitle').innerHTML = 'Thank you for your RSVP';
-            () => rsvpClose()
+            rsvpClose()
           }
         });
     },
