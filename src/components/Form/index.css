@@ -1,0 +1,15 @@
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#rsvpButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
