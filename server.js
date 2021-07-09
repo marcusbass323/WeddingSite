@@ -13,6 +13,12 @@ const dbConfig = require("./knexfile");
 const db_helpers = require("./db_helpers");
 const db = knex(dbConfig.development);
 
+server.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 server.get("/rsvp", (req, res) => {
   db_helpers
     .getUsers()

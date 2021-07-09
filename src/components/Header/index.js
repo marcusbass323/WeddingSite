@@ -10,8 +10,7 @@ const Index = () => {
     const rsvpClose = () => setRSVP(false);
     const registryClose = () => setRegistry(false);
 
-    console.log(showRegistry)
-  return (
+    return (
     <div>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home"><h1 id="siteName">Wynn | Bernard Wedding</h1></Navbar.Brand>
