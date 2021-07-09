@@ -32,3 +32,7 @@
 h1 {
   font-family: 'Prata', serif;
 }
+
+#siteName {
+  margin-left: 10px;
+}

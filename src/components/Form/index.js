@@ -24,7 +24,7 @@ export default function Index({ rsvpClose }) {
     },
     onSubmit: () => {
       axios
-        .post("https://wedding-c0910-default-rtdb.firebaseio.com/", {
+        .post("https://wynnbernardwedding.herokuapp.com/register", {
           guestName: guestName,
           guestName1: guestName1,
           guestName2: guestName2,
