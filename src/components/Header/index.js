@@ -6,9 +6,9 @@ import '../../App.css'
 
 const Index = () => {
     const [showRSVP, setRSVP] = useState(false);
-    const [showRegistry, setRegistry] = useState(false);
+    const [showOurStory, setOurStory] = useState(false);
     const rsvpClose = () => setRSVP(false);
-    const registryClose = () => setRegistry(false);
+    const OurStoryClose = () => setOurStory(false);
 
     return (
     <div>
@@ -18,14 +18,15 @@ const Index = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link onClick={() => setRSVP(true)}>RSVP</Nav.Link>
-            <Nav.Link >Our Story</Nav.Link>
+            <Nav.Link onClick={() => setOurStory(true)}>Our Story</Nav.Link>
+            <Nav.Link href="https://www.babylist.com/baby-registry-stephanie-wynn" target="_blank">Registry</Nav.Link>
             <Nav.Link id="location">Location</Nav.Link>
-            <Nav.Link onClick={() => setRegistry(true)}>Registry</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <Modal showRSVP={showRSVP} rsvpClose={rsvpClose}/>
-      <Registry showRegistry={showRegistry} registryClose={registryClose}/>
+      <Registry showOurStory={showOurStory} OurStoryClose={OurStoryClose}/>
     </div>
   );
 }

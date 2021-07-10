@@ -13,3 +13,7 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+#closeIcon {
+    cursor: pointer;
+}

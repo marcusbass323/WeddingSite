@@ -13,3 +13,27 @@ input {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+#btn {
+    background-color: rgb(157, 157, 221);
+    color: white;
+    border: none;
+}
+
+#btn:hover, #btn:active, #btn:visited {
+    background-color: #ee87dd !important;
+}
+
+#partySize {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#guestDetails {
+    margin-bottom: 25px
+}
+
+#unfortunately {
+    margin-bottom: 25px
+}
+
