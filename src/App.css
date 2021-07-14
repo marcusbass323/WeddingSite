@@ -36,3 +36,9 @@ h1 {
 #siteName {
   margin-left: 10px;
 }
+
+#us { 
+  clip-path: circle();
+  width: 60px;
+  margin-left: 25px;
+}

@@ -17,3 +17,7 @@
 #closeIcon {
     cursor: pointer;
 }
+
+#modal {
+    background-image: url('../../image/Background.png');
+}

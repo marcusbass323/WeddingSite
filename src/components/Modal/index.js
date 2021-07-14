@@ -12,7 +12,7 @@ export default function index({ showRSVP, rsvpClose }) {
           <Modal.Title id="modalTitle">RSVP</Modal.Title>
           <CloseIcon id="closeIcon" onClick={rsvpClose}/>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body id="modal">
           <Form rsvpClose={rsvpClose}/>
         </Modal.Body>
       </Modal>

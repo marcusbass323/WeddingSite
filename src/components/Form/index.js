@@ -14,7 +14,7 @@ export default function Index({ rsvpClose }) {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:7000/register", {
+      .post("https://wynnbernardweddingserver.herokuapp.com/register", {
         guestName: guestName,
         guestName2: guestName1,
         guestName3: guestName2,
@@ -25,7 +25,7 @@ export default function Index({ rsvpClose }) {
         if (response.statusText === "Created") {
           setrsvpSuccess(true);
           document.getElementById("modalTitle").innerHTML =
-            "Thank you for your RSVP";
+            "Your Reservation is Confirmed";
         }
       });
   };
@@ -45,18 +45,26 @@ export default function Index({ rsvpClose }) {
     setGuestName2(Guest);
   };
 
-  const handleNotComing = (e) => {
-    let Coming = e.target.value;
-    setNotComing(!Coming);
-    console.log(notComing);
-  };
-
   return (
     <form onSubmit={onSubmit} id="form">
+      {rsvpSuccess && (
+        <div>
+          <div id="message">Thank you for your RSVP</div>
+          <br></br>
+          <div id="message">
+            Within a few weeks you will receive a full itinerary to your mailing
+            address. No further action is needed at this time.
+          </div>
+          <br></br>
+          <div id="message">We can't wait to share this special occassion with you!</div>
+        </div>
+      )}
       {!rsvpSuccess && (
         <div>
           <div className="form-group">
-            <label for="exampleInputEmail1">Full Name</label>
+            <label for="exampleInputEmail1">
+              <b>Your Name</b>
+            </label>
             <input
               type="text"
               name="guestName"
@@ -68,7 +76,9 @@ export default function Index({ rsvpClose }) {
           </div>
           {!notComing && (
             <div id="guestDetails">
-              <label id="partySize" for="exampleInputEmail1">How many in your party?</label>
+              <label id="partySize" for="exampleInputEmail1">
+                <b>How many in your party?</b>
+              </label>
               <div id="rsvpButtons">
                 <Button
                   id="btn"
@@ -97,7 +107,9 @@ export default function Index({ rsvpClose }) {
               </div>
               {partySize === 2 && (
                 <div>
-                  <label>Extra guest name?</label>
+                  <label>
+                    <b>Extra guest name?</b>
+                  </label>
                   <input
                     type="text"
                     name="guestName1"
@@ -108,9 +120,12 @@ export default function Index({ rsvpClose }) {
                   />
                 </div>
               )}
+              <br></br>
               {partySize === 3 && (
                 <div>
-                  <label>Extra guests names?</label>
+                  <label>
+                    <b>Extra guests names?</b>
+                  </label>
                   <input
                     type="text"
                     name="guestName1"
@@ -137,16 +152,19 @@ export default function Index({ rsvpClose }) {
               class="form-check-input"
               name="notComing"
               value={notComing}
-              // onChange={handleNotComing}
               onClick={() => setNotComing(!notComing)}
             />
             <label class="form-check-label" for="exampleCheck1">
-              Unfortuntely, I can't make it.
+              <b>Unfortuntely, I can't make it.</b>
             </label>
             {notComing && (
-              <label id="unfortunately" class="form-check-label" for="exampleCheck1">
-                We will miss sharing this occasion with you, but we would like
-                to extend our thanks for your consideration.
+              <label
+                id="unfortunately"
+                class="form-check-label"
+                for="exampleCheck1"
+              >
+                We will miss sharing this special occasion with you! Thanks for
+                your consideration.
               </label>
             )}
           </div>

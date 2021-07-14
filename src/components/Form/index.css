@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 input {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -34,6 +36,15 @@ input {
 }
 
 #unfortunately {
-    margin-bottom: 25px
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: 100;
 }
 
+#message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    font-weight: 200;
+}
