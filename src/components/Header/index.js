@@ -14,7 +14,6 @@ const Index = () => {
     return (
     <div>
       <Navbar bg="light" expand="lg">
-        <img id="us" src={Us} />
         <Navbar.Brand href="#home"><h1 id="siteName">Wynn | Bernard Wedding</h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
