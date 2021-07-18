@@ -1,0 +1,15 @@
+#us { 
+    clip-path: circle();
+    width: 40px;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+
+#headerSlug {
+    display: flex;
+    flex-direction: row;
+}
+
+#modalTitle {
+    margin-top: 20px;
+}

@@ -48,3 +48,24 @@ input {
     font-size: 25px;
     font-weight: 200;
 }
+
+label {
+    color: rgb(157, 157, 221);
+    font-size: 25px;
+}
+
+#babyShowerCheck {
+    display: flex;
+    flex-direction: row;
+}
+
+#babyShowerArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%
+}
+
+#showerLabelText {
+    margin-left: 15px;
+}

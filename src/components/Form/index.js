@@ -52,11 +52,8 @@ export default function Index({ rsvpClose }) {
           <div id="message">Thank you for your RSVP</div>
           <br></br>
           <div id="message">
-            Within a few weeks you will receive a full itinerary to your mailing
-            address. No further action is needed at this time.
+            We can't wait to share this special occassion with you!
           </div>
-          <br></br>
-          <div id="message">We can't wait to share this special occassion with you!</div>
         </div>
       )}
       {!rsvpSuccess && (
@@ -76,7 +73,7 @@ export default function Index({ rsvpClose }) {
           </div>
           {!notComing && (
             <div id="guestDetails">
-              <label id="partySize" for="exampleInputEmail1">
+              <label id="partySize">
                 <b>How many in your party?</b>
               </label>
               <div id="rsvpButtons">

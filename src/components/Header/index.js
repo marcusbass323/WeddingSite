@@ -1,14 +1,16 @@
 import React, {useState} from "react";
 import {Nav, Navbar} from 'react-bootstrap';
-import Modal from '../Modal'
-import Registry from '../Registry'
-import '../../App.css'
-import Us from '../../image/Us.png'
+import Modal from '../Modal';
+import OurStory from '../OurStory';
+import Itinerary from '../Itinerary';
+import '../../App.css';
 
 const Index = () => {
     const [showRSVP, setRSVP] = useState(false);
     const [showOurStory, setOurStory] = useState(false);
+    const [showItinerary, setItinerary] = useState(false);
     const rsvpClose = () => setRSVP(false);
+    const ItineraryClose = () => setItinerary(false)
     const OurStoryClose = () => setOurStory(false);
 
     return (
@@ -18,15 +20,16 @@ const Index = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
+            <Nav.Link onClick={() => setOurStory(true)}>Our Story</Nav.Link>
             <Nav.Link onClick={() => setRSVP(true)}>RSVP</Nav.Link>
-            <Nav.Link href="https://www.babylist.com/baby-registry-stephanie-wynn" target="_blank">Registry</Nav.Link>
-            <Nav.Link id="location">Location</Nav.Link>
+            <Nav.Link href="https://www.babylist.com/baby-registry-stephanie-wynn" target="_blank">Baby Registry</Nav.Link>
+            <Nav.Link onClick={() => setItinerary(true)}>Itinerary</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
+      <Itinerary showItinerary={showItinerary} ItineraryClose={ItineraryClose}/>
       <Modal showRSVP={showRSVP} rsvpClose={rsvpClose}/>
-      <Registry showOurStory={showOurStory} OurStoryClose={OurStoryClose}/>
+      <OurStory showOurStory={showOurStory} OurStoryClose={OurStoryClose}/>
     </div>
   );
 }
