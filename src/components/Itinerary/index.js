@@ -30,8 +30,7 @@ export default function index({ showItinerary, ItineraryClose }) {
       <Modal show={showItinerary} onHide={ItineraryClose} centered>
         <Modal.Header id="Header">
           <div id="headerSlug">
-            <img id="us" src={Us} />
-            <Modal.Title id="modalTitle">Itinerary</Modal.Title>
+            <Modal.Title id="modalTitle">Wedding & Baby Shower Itinerary</Modal.Title>
           </div>
           <CloseIcon id="closeIcon" onClick={ItineraryClose} />
         </Modal.Header>

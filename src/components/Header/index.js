@@ -23,7 +23,7 @@ const Index = () => {
             <Nav.Link onClick={() => setOurStory(true)}>Our Story</Nav.Link>
             <Nav.Link onClick={() => setRSVP(true)}>RSVP</Nav.Link>
             <Nav.Link href="https://www.babylist.com/baby-registry-stephanie-wynn" target="_blank">Baby Registry</Nav.Link>
-            <Nav.Link onClick={() => setItinerary(true)}>Itinerary</Nav.Link>
+            <Nav.Link onClick={() => setItinerary(true)}>Locations & Times</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
